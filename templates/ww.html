@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Co-founder & Investors</title>
+
+  <!-- Font Awesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  <style>
+    /* General Page Styling */
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #b763d1, #912ae6);
+        font-family: 'Raleway', sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    .container {
+        width: 80%;
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 12px;
+        background: white;
+        color: black;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Header Styling */
+    header {
+        padding: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+    }
+
+    /* Get Started Buttons */
+    .get-started {
+        float: right;
+    }
+
+    .get-started button {
+        background: #912ae6;
+        border: none;
+        color: white;
+        font-size: 14px;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+
+    .get-started button:hover {
+        background: white;
+        color: #912ae6;
+    }
+
+    /* Co-founder Section */
+    .cofounder-container {
+        margin-top: 20px;
+        padding: 20px;
+        background: linear-gradient(to top, white, #f8f8f8);
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .cofounder-input {
+        width: 60%;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #912ae6;
+        border-radius: 8px;
+        outline: none;
+        margin-top: 10px;
+    }
+
+    .find-cofounder-button {
+        background-color: #912ae6;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .find-cofounder-button:hover {
+        background-color: white;
+        color: #912ae6;
+        border: 2px solid #912ae6;
+    }
+
+    /* Co-founder Results */
+    .cofounder-results {
+        margin-top: 15px;
+        padding: 10px;
+        background: #f8f8f8;
+        color: black;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    /* Trusted Companies Section */
+    .trusted-companies-container {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .trusted-companies-container img {
+        max-width: 70%;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="fluid-container">
+    <div class="blue-back">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <header>
+            <span class="logo">Business Homepage</span>
+            <span class="hiring-text">We're hiring</span>
+            <div class="get-started">
+              <button class="get-started-login button-hover">Login</button>
+              <button class="get-started-free button-hover">Get started for free</button>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+
+    <!-- Find Co-founder or Investor Section -->
+    <div class="container cofounder-container">
+      <h2>Find Your Co-founder or Investor</h2>
+      <p>Connect with the right people based on the latest market trends.</p>
+      <input type="text" class="cofounder-input" placeholder="Enter your business niche (e.g., AI, E-commerce)">
+      <button class="find-cofounder-button">Find Match</button>
+      <div id="cofounder-results" class="cofounder-results"></div>
+    </div>
+
+    <!-- Trusted Companies Section-->
+    <div class="trusted-companies-container">
+      <h5>Trusted by these great companies</h5>
+      <img src="{{ url_for('static', filename='img/trusted-companies.PNG') }}" alt="Google, Apple, Microsoft, Amazon, Tesla">
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.find-cofounder-button').addEventListener('click', function() {
+      const niche = document.querySelector('.cofounder-input').value;
+      const resultsContainer = document.getElementById('cofounder-results');
+      resultsContainer.innerHTML = `<p>Finding top investors and co-founders in <strong>${niche}</strong>...</p>`;
+      setTimeout(() => {
+        resultsContainer.innerHTML = `<p>Connect with top professionals in ${niche}: <a href='https://www.linkedin.com/search/results/people/?keywords=${niche} startup' target='_blank'>Find on LinkedIn</a></p>`;
+      }, 2000);
+    });
+  </script>
+
+</body>
+</html>

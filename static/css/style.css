@@ -1,0 +1,523 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.blue-back {
+  background: linear-gradient(to top, #912ae6, transparent);
+  width: 100%;
+  height: 760px;
+}
+
+
+/* HEADER AREA */
+
+header{
+  margin-top: 1em;
+  color: white;
+  font-weight: bold;
+}
+
+.hiring-text{
+  font-size: 10px;
+  color: white;
+    text-decoration: underline;
+}
+
+.hiring-text:hover{
+  text-decoration: underline;
+  color: lightgrey;
+  cursor: pointer;
+}
+
+.get-started{
+  display: inline;
+  float: right;
+}
+
+.get-started-login{
+  background-color: #b763d1;
+  border: solid #912ae6;
+  color: white;
+  font-size: 13px;
+  padding: .5em;
+  border-radius: 3px;
+  border-width: thin;
+}
+
+.get-started-free{
+  background-color: #b763d1;
+  color: white;
+  font-size: 13px;
+  border: solid #912ae6;
+  border-width: thin;
+  padding: .5em;
+  border-radius: 3px;
+}
+
+.button-hover:hover{
+  background-color: white;
+  color: #b763d1;
+  cursor:pointer;
+}
+
+/* INTRO TEXT CONTENT AREA */
+
+.title-container{
+  text-align: center;
+}
+
+.title-task-text{
+  margin-top: 2em;
+  text-align: center;
+  color: white;
+}
+
+.task-automation-text{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.title-description-text{
+  text-align: center;
+  margin-top: 2em;
+  color: white;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 3.5em;
+}
+
+.title-description-text {
+  text-align: center;
+  margin-top: 2em;
+  color: white;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 0.5em; /* Reduced from 3.5em to reduce space */
+}
+
+.aligned{
+  text-align: center;
+}
+
+.title-get-started-button{
+  height: 2.5em;
+  border: solid #912ae6;
+  border-width: thin;
+  padding: .5em;
+  padding-right: 1em;
+  padding-left: 1em;
+  background-color: #912ae6;
+  color: white;
+  border-radius: 3px;
+}
+
+.title-get-started-button:hover{
+  background-color: white;
+  color: #912ae6;
+  cursor:pointer;
+}
+
+.credit-card-text{
+  color: white;
+  font-size: 12px;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.title-video-text{
+  font-size: 13px;
+  color: white;
+  display: inline-block;
+  text-align: center;
+}
+
+.watch-video-container{
+  margin-top: 1em;
+  text-align: center;
+}
+
+.title-play-icon{
+  color: white;
+  display: inline-flex;
+  align-content: center;
+  vertical-align: middle;
+  margin-right: -20em;
+  margin-left: 1em;
+  font-size: 8px;
+}
+
+/*.watch-video-container:hover {
+  cursor: pointer;
+	text-shadow: 0px 0px 10px rgba(255,255,100,1);
+}*/
+
+/* Features Section */
+
+.workflow-container{
+  margin-top: 5em;
+  text-align: center;
+  color: #000000;
+}
+
+.workflow-picture{
+  margin-top: 1em;
+}
+
+.process-text{
+  text-align: center;
+  font-size: 14px;
+  margin-left: 6em;
+  color: #000000;
+}
+
+.improve-text-container{
+  margin-top: 5em;
+  text-align: center;
+  color: #000000;
+}
+
+.client-onboard-container img{
+  margin-left: 33%;
+  margin-top: 3em;
+}
+
+.light-icon{
+  margin-top: 3em;
+  margin-bottom: 1em;
+  color: #912ae6;
+}
+
+/* Divider styling */
+
+.line-divider{
+  margin-top: 1em;
+  margin-bottom: 2em;
+  background-color: #912ae6;
+  height: 1px;
+  width: 90px;
+}
+
+.procedure-text{
+  color: #000000;
+}
+
+.procedure-subtext{
+  font-size: 12px;
+  color: black;
+}
+
+.explore-features-container{
+  margin-top: 3.5em;
+  text-align: center;
+}
+
+.explore-features-button{
+  font-size: 12px;
+  color: #912ae6;
+  background-color: white;
+  border: solid #912ae6;
+  border-width: thin;
+  padding: .75em;
+  border-radius: 3px;
+}
+
+.explore-features-button:hover{
+  background-color: #912ae6;
+  color: white;
+  cursor:pointer;
+}
+
+/* Reviews slideshow */
+
+.arrow-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: #000000;
+}
+
+.arrow-container:hover{
+  color: #912ae6;
+  cursor: pointer;
+}
+
+.slideshow-container{
+  margin: 5em 0 5em 0;
+}
+
+.slider{
+  display: none;
+  border: solid #912ae6;
+  border-width: thin;
+  border-radius: 5px;
+  padding: 2em 1em 2em 1em;
+}
+
+.initial-slide{
+  display: block;
+}
+
+.testimonial-text{
+  font-style: italic;
+  font-size: 13px;
+  padding: 0 0 1em 0;
+}
+
+.testimonial-pic{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.testimonial-name{
+  font-size: 18px;
+  width: 50px;
+}
+
+.testimonial-company{
+  color: grey;
+  font-size: 14px;
+}
+
+/* Trusted Companiees */
+
+.trusted-companies-container{
+  text-align: center;
+  color: #403e3e;
+  margin: 2em 0 6em 0;
+}
+
+.trusted-companies{
+  margin-bottom: .5em;
+}
+
+/* Signup banner footer section */
+
+.signup-banner{
+  background-color: #912ae6;
+  text-align: center;
+}
+
+.signup-banner-text-container{
+  color: white;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+/* Chatbot Sidebar */
+.chatbot-container {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 400px;  /* Increased from 350px to 400px */
+  height: 800px; /* Increased from 500px to 550px */
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Header */
+.chat-header {
+  background: #912ae6;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Chat Body */
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat Messages */
+.chat-message {
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.bot-message {
+  background: #e1f5fe;
+  align-self: flex-start;
+}
+
+.user-message {
+  background: #912ae6;
+  color: white;
+  align-self: flex-end;
+}
+
+/* Chat Footer */
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.chat-footer button {
+  background: #912ae6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Remove the blue background from Bootstrap buttons */
+.btn-primary {
+  background: none !important;  /* Remove blue background */
+  color: #ffffff !important;      /* Make text white */
+  border: none !important;      /* Remove button border */
+  font-weight: bold;            /* Optional: Make text bold */
+  font-size: 16px;              /* Optional: Adjust text size */
+}
+
+/* Add hover effect to buttons */
+.btn-primary:hover {
+  color: #912ae6 !important;  /* Optional: Change text color on hover */
+  background: none !important;
+}
+
+/* Custom Navbar Styling */
+/* Custom Navbar Styling */
+/* Simple Custom Navbar */
+.custom-navbar {
+  background: none;
+  padding: 0; /* Reduced or remove padding */
+  text-align: center;
+  margin-top: 0.5em; /* Adjust or add this as needed */
+}
+
+/* Navbar Links */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Ensures horizontal alignment */
+  gap: 10px; /* Space between links */
+}
+
+/* Navbar Link Styling */
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 16px;
+  /*font-weight: bold;
+  text-decoration: underline;*/
+  padding: 10px 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+  color: #ffd700; /* Gold hover effect */
+}
+/* Center Chatbot Under "Chat with us" */
+.chatbot-row {
+  display: flex;
+  justify-content: center; /* Ensures horizontal centering */
+  align-items: center; /* Ensures vertical alignment */
+  text-align: center;
+  margin-top: 30px; /* Space below "Chat with us" */
+}
+
+/* Chatbot Container - Bigger & Centered */
+.chatbot-container {
+  width: 100%;
+  max-width: 900px; /* Keeps it large but not too wide */
+  height: 600px; /* Taller chat area */
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  margin: auto; /* Ensures full centering */
+  position: relative; /* Moves with page */
+}
+
+/* Center Text in Chat Section */
+.chatbot-row h2, .chatbot-row p {
+  text-align: center;
+  width: 100%;
+}
+
+/* Chat Header */
+.chat-header {
+  background: #912ae6;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Chat Body - Scrollable */
+.chat-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  font-size: 16px;
+}
+
+/* Chat Input */
+.chat-footer {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.chat-footer button {
+  background: #912ae6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Make sure it's centered on small screens */
+@media screen and (max-width: 768px) {
+  .chatbot-container {
+      max-width: 95%;
+      height: 500px;
+  }
+}
+
+
+
+

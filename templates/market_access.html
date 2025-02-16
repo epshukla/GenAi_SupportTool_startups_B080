@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Price Comparison</title>
+
+    <style>
+        /* Page Background & Layout */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #b763d1, #912ae6);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Main Container */
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            width: 420px;
+            color: black;
+        }
+
+        /* Heading */
+        h1 {
+            font-size: 24px;
+            color: #912ae6;
+            margin-bottom: 10px;
+        }
+
+        /* Subtitle Note */
+        .note {
+            font-size: 14px;
+            background: #f8f8f8;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+            color: black;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #912ae6;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        /* Compare Button */
+        button {
+            background-color: #912ae6;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: white;
+            color: #912ae6;
+            border: 2px solid #912ae6;
+        }
+
+        /* Price List */
+        .price-list {
+            margin-top: 20px;
+        }
+
+        .price-item {
+            background: #e0e0e0;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 5px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .best-price {
+            background: #4CAF50;
+            color: white;
+            font-weight: bold;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Product Price Comparison</h1>
+        <p>Find the best platform to advertise and acquire resources at the lowest cost.</p>
+
+        <form method="POST">
+            <div class="form-group">
+                <label for="product"><strong>Enter Product Name:</strong></label>
+                <input type="text" id="product" name="product" required>
+            </div>
+            <button type="submit">Compare Prices</button>
+        </form>
+
+        {% if prices %}
+            <div class="price-list">
+                <h2>Price Comparison:</h2>
+                {% for site, price in prices.items() %}
+                    <div class="price-item {% if site == lowest_price_site %}best-price{% endif %}">
+                        <strong>{{ site }}</strong>: ₹{{ price }}
+                    </div>
+                {% endfor %}
+            </div>
+
+            {% if lowest_price_site %}
+                <div class="best-price">
+                    <h2>Best Price Available At:</h2>
+                    <p>{{ lowest_price_site }} - ₹{{ prices[lowest_price_site] }}</p>
+                </div>
+            {% endif %}
+        {% endif %}
+
+        <!-- Information Note -->
+        <div class="note">
+            <p style="color: #ff0000;"><strong>Note:</strong> The idea of this sub-section was to help users find the best medium for advertising their product (e.g., YouTube, TV, OTT) and suggest the cheapest ways to acquire resources for small-scale production.</p>
+        </div>
+    </div>
+
+</body>
+</html>

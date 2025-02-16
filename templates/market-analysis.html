@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Market Analysis</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #b763d1, #912ae6);
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 12px;
+            background: white;
+            color: black;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #912ae6;
+        }
+
+        p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 10px;
+        }
+
+        input {
+            width: 60%;
+            padding: 12px;
+            border: 2px solid #912ae6;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            color: black;
+        }
+
+        .btn {
+            background-color: #912ae6;
+            color: white;
+            border: 2px solid #912ae6;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: #912ae6;
+        }
+
+        .chart-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .analysis-results {
+            text-align: left;
+            margin-top: 20px;
+            padding: 10px;
+            background: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Startup Market & Funding Analysis</h1>
+        <p>Enter your business idea to get tailored insights.</p>
+    
+        <form id="marketAnalysisForm" class="form-container">
+            <input type="text" id="businessIdea" placeholder="Enter your business idea..." required>
+            <button type="submit" class="btn">Analyze Market</button>
+        </form>
+    
+        <!-- Styled Analysis Results Section -->
+        <div id="analysisResults" class="analysis-results"></div>
+    
+        <div class="chart-container">
+            <h3>Global Market Share Distribution</h3>
+            <canvas id="marketShareChart"></canvas>
+        </div>
+    </div>
+    
+
+    <script src="{{ url_for('static', filename='js/market-analysis.js') }}"></script>
+
+</body>
+</html>
