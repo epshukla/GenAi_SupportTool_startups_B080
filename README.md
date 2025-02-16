@@ -8,3 +8,4 @@ GenAI implementation using Flask
 
 GeminAPI, OpenAI API, Google Finaance API.
 
+Documentation in Documentation_D080
